@@ -103,6 +103,6 @@ Visit [http://localhost:3000](http://localhost:5173) in your browser.
 
 ## 👥 Team
 
-Built by the **WatchWhale Team** during the RAPTORS Hackathon (May 30 – June 2, 202X).
+Built by the **Hzrullnut Team** during the RAPTORS Hackathon (May 30 – June 2, 2025).
 
 ---
