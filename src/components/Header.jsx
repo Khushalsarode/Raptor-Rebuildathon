@@ -3,6 +3,7 @@ import pagesData from '../PagesData/PagesData'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './Navbar' 
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 const Header = () => {
   const [theme, setTheme] = useState('light')
   const [user, setUser] = useState(null)
@@ -96,22 +97,41 @@ const Header = () => {
               />
               <span className="font-semibold select-none">{user.name}</span>
 
-              {/* Dropdown menu */}
-              {menuOpen && (
-                <div className="absolute right-0 top-full mt-2 w-40 bg-ocean-lightButton dark:bg-ocean-darkButton rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                  <ul className="py-1 text-ocean-lightPrimary dark:text-ocean-darkPrimary text-base">
-                    <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
-                      <span>👤</span> Profile
-                    </li>
-                    <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
-                      <span>⚙️</span> Settings
-                    </li>
-                    <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
-                      <span>📊</span> Dashboard
-                    </li>
-                  </ul>
-                </div>
-              )}
+             {/* Dropdown menu */}
+{menuOpen && (
+  <div className="absolute right-0 top-full mt-2 w-40 bg-ocean-lightButton dark:bg-ocean-darkButton rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+    <ul className="py-1 text-ocean-lightPrimary dark:text-ocean-darkPrimary text-base">
+      <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
+        <Link
+          to="/profile"
+          className="flex items-center gap-2 text-ocean-lightPrimary dark:text-ocean-darkPrimary hover:underline"
+        >
+          <span>👤</span>
+          <span>Profile</span>
+        </Link>
+      </li>
+      <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
+        <Link
+          to="/settings"
+          className="flex items-center gap-2 text-ocean-lightPrimary dark:text-ocean-darkPrimary hover:underline"
+        >
+          <span>⚙️</span>
+          <span>Settings</span>
+        </Link>
+      </li>
+      <li className="px-4 py-2 hover:bg-ocean-lightSecondary dark:hover:bg-ocean-darkSecondary cursor-pointer flex items-center gap-2">
+        <Link
+          to="/dashboard"
+          className="flex items-center gap-2 text-ocean-lightPrimary dark:text-ocean-darkPrimary hover:underline"
+        >
+          <span>📊</span>
+          <span>Dashboard</span>
+        </Link>
+      </li>
+    </ul>
+  </div>
+)}
+
 
               {/* Logout button */}
               <button
