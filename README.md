@@ -45,9 +45,6 @@ As part of the **RAPTORS Hackathon**, we chose to **redesign WhaleMatch.org**, a
 ## 🛠️ Technologies Used
 - React + Vite  
 - Tailwind CSS  
-- HTML5, JSX  
-- Responsive Design Principles  
-- Meta Tags (SEO + Social Sharing)
 
 ---
 
@@ -65,7 +62,7 @@ cd watchwhale
 npm install
 npm run dev
 ```
-Visit [http://localhost:3000](http://localhost:5173) in your browser.
+Visit [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
